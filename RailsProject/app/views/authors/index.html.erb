@@ -12,9 +12,11 @@
   <tbody>
     <% @authors.each do |author| %>
       <tr>
-        <td><%= link_to 'Show', author %></td>
-        <td><%= link_to 'Edit', edit_author_path(author) %></td>
-        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%=author.name%></td>
+        <td><%= link_to 'Информация об авторе', author %></td>
+        <td><%= link_to 'Все книги', show_all_books_author_path(author)%></td>
+        <td><%= link_to 'Изменить', edit_author_path(author) %></td>
+        <td><%= link_to 'Удалить', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Author', new_author_path %>
+<%= link_to 'Новый автор', new_author_path %>
