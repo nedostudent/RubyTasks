@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+<p>ID автора = <%= @book.author_id =%></p>
+<p>ID книги = <%= @book.id =%></p>
+<p>Название книги = <%= @book.name =%></p>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
